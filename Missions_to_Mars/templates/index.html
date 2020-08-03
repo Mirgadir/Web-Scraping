@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Mission to Mars</title>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <script src="https://use.fontawesome.com/e9c0b42f7c.js"></script>
+</head>
+
+<body>
+  <div class="container-fluid">
+    <div style="background:transparent !important" class="jumbotron text-center">
+    	<h1>Mission to Mars</h1>
+		<p><a class="btn btn-primary btn-lg" href="/scrape" role="button">Scrape New Data</a></p>
+    </div>
+
+	<div style="background:transparent !important" class="jumbotron text-center">
+		<div class="col">
+			<div class='row'>
+				<div class='col-md-12'>
+					<hr>
+					<h3><b>Latest Mars News:</b></h3>
+					<h4>{{ mission.news_title }}</h4>
+					<p>{{ mission.news_paragraph }}</p>
+					<hr>
+				</div>	
+			</div>
+			<div class="row">
+				<div class='col-md-8'>
+
+						<h4><b>Featured Mars Image</b></h4>
+						<img src="{{ mission.featured_image_url }}" class='img-responsive' alt="Featured Image">
+					
+				</div>
+				<div class='col-md-4'>
+					<h4><b>Mars Facts</b></h4>
+					<div class='table-responsive'>
+						<table border="1" class="dataframe table table-hover table-light">
+							<thead>
+								<tr style="text-align: center">
+									<th style="text-align: center">Parameter</th>
+									<th style="text-align: center">Value</th>
+								</tr>
+							</thead>
+							<tbody>
+								<tr>
+									<td>{{ mission.row1_title }}</td>	
+									<td>{{ mission.row1_value }}</td>	
+								</tr>
+								<tr>
+									<td>{{ mission.row2_title }}</td>	
+									<td>{{ mission.row2_value }}</td>	
+								</tr>
+								<tr>
+									<td>{{ mission.row3_title }}</td>	
+									<td>{{ mission.row3_value }}</td>	
+								</tr>
+								<tr>
+									<td>{{ mission.row4_title }}</td>	
+									<td>{{ mission.row4_value }}</td>	
+								</tr>
+								<tr>
+									<td>{{ mission.row5_title }}</td>	
+									<td>{{ mission.row5_value }}</td>	
+								</tr>
+								<tr>
+									<td>{{ mission.row6_title }}</td>	
+									<td>{{ mission.row6_value }}</td>	
+								</tr>
+								<tr>
+									<td>{{ mission.row7_title }}</td>	
+									<td>{{ mission.row7_value }}</td>	
+								</tr>
+								<tr>
+									<td>{{ mission.row8_title }}</td>	
+									<td>{{ mission.row8_value }}</td>	
+								</tr>
+								<tr>
+									<td>{{ mission.row9_title }}</td>	
+									<td>{{ mission.row9_value }}</td>	
+								</tr>
+							</tbody>
+						</table>
+					</div>
+				</div>
+			</div>
+			<div class='row'>
+				<div class='col-md-12'>
+					<hr>
+					<h3><b>Current Weather on Mars</b></h3>
+					<p>{{ mission.mars_weather }}</p>
+					<hr>
+				</div>
+			</div>
+		</div>
+	</div>
+
+			
+	<div class="w3-container">
+		<div style="background:transparent !important" class="jumbotron text-center">
+			<h2><b>Mars Hemispheres</b></h2> 
+			<hr>
+			<div class="col">
+				<div class="container">
+					<div class="row">
+						<div class="col-md-6">
+							<div class='thumbnail'>
+								<img src="{{ mission.url1_img }}" class='img-responsive' alt="{{ mission.url1_title }}">
+								<h4>{{ mission.url1_title }}</h4>
+							</div>	
+						</div>
+						<div class="col-md-6">
+							<div class='thumbnail'>
+								<img src="{{ mission.url2_img }}" class='img-responsive' alt="{{ mission.url2_title }}">
+								<h4>{{ mission.url2_title }}</h4>
+							</div>
+						</div>
+						<div class="w-100"></div>
+						<div class="col-md-6">
+							<div class='thumbnail'>
+								<img src="{{ mission.url3_img }}" class='img-responsive' alt="{{ mission.url3_title }}">
+								<h4>{{ mission.url3_title }}</h4>
+							</div>
+						</div>
+						<div class="col-md-6">
+							<div class='thumbnail'>
+								<img src="{{ mission.url4_img }}" class='img-responsive' alt="{{ mission.url4_title }}">
+								<h4>{{ mission.url4_title }}</h4>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>	
+		</div>
+	</div>
+  </div>
+  </div>
+</body>
+
+</html>
+
+
+
+
+
+
